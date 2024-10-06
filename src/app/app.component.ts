@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'corso-angilar2';
+
+  onClick(e: any) {
+    console.log(e)
+  
+  }
+
+  onInput(event: Event) {
+    console.log((<HTMLInputElement>event.target).value)
+  
+  }
 }

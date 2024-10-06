@@ -5,33 +5,40 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   templateUrl: './prova.component.html',
   styleUrl: './prova.component.css'
 })
-export class ProvaComponent implements OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy{
-  nomeCane = "Roger";
+export class ProvaComponent implements OnInit{
+
+  // isDisabled = true;
+  // immagine1 = 'https://www.bluegables.co.nz/cache/images/catalogue/313_2-398x319.jpg';
+  // immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
+
+  animali = [
+    {
+      nome: 'roger',
+      razza: 'golden',
+      descrizione: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.`,
+      immagine: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+    },
+    {
+      nome: 'Spirit',
+      razza: 'Horse',
+      descrizione: `Spirit Horse is the biggest of the six original and distinct horces breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.`,
+      immagine: 'https://www.bluegables.co.nz/cache/images/catalogue/313_2-398x319.jpg'
+    }
+  ]
 
   constructor() {
     console.log("costruttore");
 }
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy")
-  }
-  ngDoCheck(): void {
-    console.log("ngDoCheck")
-  }
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit")
-  }
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked")
-  }
-  ngAfterContentInit(): void {
-    console.log("ngAfterContentInit")
-  }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
-  }
 
   ngOnInit(): void {
-    console.log("ngOnInit"); 
+    console.log("ngOnInit");
+    // setInterval(() => {
+    //   this.isDisabled = !this.isDisabled
+    // }, 2000)
     
   }
 
