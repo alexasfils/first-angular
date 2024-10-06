@@ -1,8 +1,54 @@
 <!-- <app-prova></app-prova> -->
 <!--[disabled]="isDisabled"-->
-<!-- <button mat-raised-button color="primary" (click)="onClick(this)">Primary</button> -->
+<!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
 
 <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
-</mat-form-field>
+    <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
+</mat-form-field> -->
+
+<!--TWo way binding-->
+
+<!-- <p>{{title}}</p> -->
+
+
+<!--Derectives - le direttive
+-built-in (ngClass, ngStyle, ngModel) modificani il comportamento
+-attribute modificano comportamento o apparenza di un elemento
+-atructural (*ngIf, *ngFor) cambiano il DOM aggiugendo o rimovendo elementi
+-->
+
+<!--
+*ngIf basico
+- else
+-then
+-->
+
+<!-- <p *ngIf="isVisible">Ciao sono un paragrafo</p> -->
+<!-- <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+<ng-template #bloccoElse>
+    <p>Non sono visibbile</p>
+</ng-template>
+<ng-template #bloccoIf>
+    <p>Sono visibbile</p>
+</ng-template>
+
+<p *ngIf="isVisible">Visibbile</p>
+<p *ngIf="!isVisible">Non Visibbile</p> -->
+
+<!-- <div *ngFor="let persona of persone; index as i">
+    <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+    <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+    <p>{{i}} <strong>{{persona.nome}} </strong> {{persona.cognome}} {{persona.eta}}</p>
+</div> -->
+
+
+<!-- ngSwitch basico -->
+
+<div [ngSwitch]="stringa">
+    <p *ngSwitchCase="'pippo'">UNO</p>
+    <p *ngSwitchCase="'paperino'">DUE</p>
+    <p *ngSwitchCase="'pluto'">TRE</p>
+    <p *ngSwitchCase="'topolino'">QUATTRO</p>
+    <p *ngSwitchDefault>default</p>
+</div>
