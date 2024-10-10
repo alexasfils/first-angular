@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent{
+  
   title = 'corso-angilar2';
 
   isVisible = true;
@@ -23,19 +24,20 @@ export class AppComponent {
   numero = 3;
   stringa = 'paperino';
 
-  onClick() {
-    this.persone = [
-    {nome: 'Piero', cognome: 'Verdi',eta: 25,isOnline: true},
-    {nome: 'Alessandro',cognome: 'Neri',eta: 20,isOnline: false},
-    {nome: 'Michele',cognome: 'Gialli',eta: 35,isOnline: true},
-    {nome: 'Leo',cognome: 'Crini',eta: 45,isOnline: false},
-    {nome: 'Perino',cognome: 'Ciombo',eta: 27,isOnline: true}
-    ]
-  }
+  // onClick() {
+  //   this.persone = [
+  //   {nome: 'Piero', cognome: 'Verdi',eta: 25,isOnline: true},
+  //   {nome: 'Alessandro',cognome: 'Neri',eta: 20,isOnline: false},
+  //   {nome: 'Michele',cognome: 'Gialli',eta: 35,isOnline: true},
+  //   {nome: 'Leo',cognome: 'Crini',eta: 45,isOnline: false},
+  //   {nome: 'Perino',cognome: 'Ciombo',eta: 27,isOnline: true}
+  //   ]
+  // } 
 
-  onRiceviDati(value: string){
-    console.log(value);
-}
+
+//   onRiceviDati(value: string){
+//     console.log(value);
+// }
   // onClick(event: Event) {
   //   this.title= 'ho cliccato sull bottone'
   // }
