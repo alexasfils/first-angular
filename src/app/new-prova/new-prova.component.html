@@ -1,4 +1,25 @@
 <!--Prendere reference elemento HTML in typescript-->
 
-<input type="text" name="" id="" #inputReference value="123">
-<button (click)="onClick()">Click</button>
+<!-- <input type="text" name="" id="" #inputReference value="123">
+<button (click)="onClick()">Click</button> -->
+
+
+
+<!--
+Creare una direttiva,
+passare i dati a na direttiva,
+aggiungere una seconda proprieta'-->
+<!--Aggiungo la direttiva  appHighlight da highlight.directive.ts dal costruttore e gli applico lo stile che cambia il colore.-->
+<h2>scegli il colore dell evidenziatore</h2>
+
+<div>
+    <input type="radio" name="combiaColoreEvidenziato" (click)="cambiaColoreEvidenziato('red')">Rosso
+    <input type="radio" name="combiaColoreEvidenziato" (click)="cambiaColoreEvidenziato('green')">Verde
+    <input type="radio" name="combiaColoreEvidenziato" (click)="cambiaColoreEvidenziato('purple')">Viola
+</div>
+
+<!--Facciamo il property-binding alla direttiva appHighlight che si collega con la variabbile colore che setto su app.component
+Con default metto ilcolore di default senza dirlo dentro il componente stesso -->
+<p [appHighlight]="colore" defaultColor="blue">Ciao sono new-prova.component</p>
+<p [appHighlight]="colore" defaultColor="grey">Ciao sono new-prova.component</p>
+<p [appHighlight]="colore" defaultColor="yellow">Ciao sono new-prova.component</p>

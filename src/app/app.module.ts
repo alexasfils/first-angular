@@ -12,12 +12,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
+import { HighlightDirective } from './direttive/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProvaComponent,
-    NewProvaComponent
+    NewProvaComponent,
+    HighlightDirective
   ],
   imports: [
       BrowserModule,

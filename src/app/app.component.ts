@@ -33,7 +33,7 @@ export class AppComponent{
   //   {nome: 'Perino',cognome: 'Ciombo',eta: 27,isOnline: true}
   //   ]
   // } 
-
+  
 
 //   onRiceviDati(value: string){
 //     console.log(value);
@@ -47,4 +47,5 @@ export class AppComponent{
   //   console.log((<HTMLInputElement>event.target).value)
   
   // }
+
 }
