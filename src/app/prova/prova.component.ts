@@ -32,9 +32,9 @@ export class ProvaComponent implements OnInit{
 
   //il Valore di (data) arriva da fuori
   // @Input() data: any;
-  @Output() mandaDatiEvento = new EventEmitter<string>();
+  // @Output() mandaDatiEvento = new EventEmitter<string>();
 
-  nome = 'Luca';
+  // nome = 'Luca';
 
   constructor() {
     console.log("costruttore");
@@ -56,7 +56,7 @@ export class ProvaComponent implements OnInit{
   prende i dati in questa situazione il nome dell prova.component.ts con una funzione manda dati gli passo il Output 
   (mandaDatiEvento che prende il nome come paramentro e al click dell bottone su prova.component.html manda i dati presi dall prova.component.ts all app.component)
   */
-  mandaDati() {
-    this.mandaDatiEvento.emit(this.nome);
-  }
+  // mandaDati() {
+  //   this.mandaDatiEvento.emit(this.nome);
+  // }
 }

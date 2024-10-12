@@ -1,0 +1,6 @@
+<p>prova-service works!</p>
+
+<!--Prendo l'aarey di persone dall componente prova-service che arriva dall service servizio-prova-->
+<ul>
+    <li *ngFor="let persona of servizioProva.getPersone()">{{persona.nome}} {{persona.cognome}} {{persona.eta}}</li>
+</ul>

@@ -27,6 +27,8 @@ export class NewProvaComponent{
   //   console.log(this.referenza.nativeElement.value);
   // }
 
+ //ESERCIZIO DIRETTIVA CON NEW-PROVA
+
   //colore iniziale
   colore = '';
 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-// import { ProvaComponent } from './prova/prova.component';
+import { RouterModule, Routes } from '@angular/router'
 
 export const routes: Routes = [];
 

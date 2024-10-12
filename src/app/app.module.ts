@@ -13,13 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
 import { HighlightDirective } from './direttive/highlight.directive';
+import { ProvaServiceComponent } from './prova-service/prova-service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProvaComponent,
     NewProvaComponent,
-    HighlightDirective
+    HighlightDirective,
+    ProvaServiceComponent
   ],
   imports: [
       BrowserModule,

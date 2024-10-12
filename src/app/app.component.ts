@@ -1,29 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ServizioProvaService } from './servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   
   title = 'corso-angilar2';
 
   isVisible = true;
-
-  persone = [
-    {nome: 'pippo', cognome: 'Verdi',eta: 25,isOnline: true},
-    {nome: 'Mimmo',cognome: 'Neri',eta: 20,isOnline: false},
-    {nome: 'Ciro',cognome: 'Gialli',eta: 35,isOnline: true},
-    {nome: 'Leonardo',cognome: 'Crini',eta: 45,isOnline: false},
-    {nome: 'Peppe',cognome: 'Ciombo',eta: 27,isOnline: true}
-  ]
-  color = "green";
-  color2 = "red";
-
+  
   numero = 3;
+  oggi = Date.now();
   stringa = 'paperino';
 
+  
+  color = "green";
+  color2 = "red";
+//innietto il servizio nell costruttore e stampo a video il valore della stringa che e dentro il service
+  constructor(private servizioProva: ServizioProvaService) {
+    
+  }
+  ngOnInit(): void {
+    console.log("sono dentro app component:", this.servizioProva.getStringa());
+  }
+
+  
   // onClick() {
   //   this.persone = [
   //   {nome: 'Piero', cognome: 'Verdi',eta: 25,isOnline: true},

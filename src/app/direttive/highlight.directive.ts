@@ -5,6 +5,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 })
 export class HighlightDirective {
 
+  //ESERCIZIO DIRETTIVA CON NEW-PROVA
   @Input() appHighlight = '';
   @Input() defaultColor = '';
 
