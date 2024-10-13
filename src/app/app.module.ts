@@ -3,8 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app.routes';
 import { ProvaComponent } from './prova/prova.component';
+import { ProvaServiceComponent } from './prova-service/prova-service.component';
+import { AboutComponent } from './componenti/about/about.component';
+import { ContactComponent } from './componenti/contact/contact.component';
+
+import { AppRoutingModule } from './app.routes';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -13,7 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
 import { HighlightDirective } from './direttive/highlight.directive';
-import { ProvaServiceComponent } from './prova-service/prova-service.component';
+import { HomeComponent } from './componenti/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +26,10 @@ import { ProvaServiceComponent } from './prova-service/prova-service.component';
     ProvaComponent,
     NewProvaComponent,
     HighlightDirective,
-    ProvaServiceComponent
+    ProvaServiceComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
       BrowserModule,
