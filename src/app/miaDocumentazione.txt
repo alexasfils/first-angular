@@ -1,0 +1,23 @@
+*ngIf basico
+- else
+-then
+
+<p *ngIf="isVisible">Ciao sono un paragrafo</p> 
+<ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+<ng-template #bloccoElse>
+    <p>Non sono visibbile</p>
+</ng-template>
+<ng-template #bloccoIf>
+    <p>Sono visibbile</p>
+</ng-template>
+
+<p *ngIf="isVisible">Visibbile</p>
+<p *ngIf="!isVisible">Non Visibbile</p> 
+ 
+<div *ngFor="let persona of persone; index as i">
+    <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+    <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+    <p>{{i}} <strong>{{persona.nome}} </strong> {{persona.cognome}} {{persona.eta}}</p>
+</div>
+
+////////////////////////////////////////////////////////////////////////////////////////

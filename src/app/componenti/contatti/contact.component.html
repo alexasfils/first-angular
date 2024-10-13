@@ -1,0 +1,16 @@
+<p style="text-transform: uppercase; margin-top: 25px; color: red">Lista contatti</p>
+
+<div *ngIf="!isProfile; else profiloContatto">
+    <div *ngFor="let persona of persone; index as i">
+        <a routerLink="/contatti/{{i}}">
+            <p>{{i+1}} {{persona.nome}} {{persona.cognome}}</p>
+        </a>
+        <!-- <p *ngIf="isProfile"> {{persone.getPersona(i)}}</p> -->
+    </div>
+</div>
+<ng-template #profiloContatto>
+    <p>Profilo di {{persona.nome}} {{persona.cognome}}</p>
+</ng-template>
+<!-- <div *ngFor="let persona of persone; index as i">
+    <p *ngIf="persona[i] = 3">{{i+1}} {{persona.nome}} {{persona.cognome}}</p>
+</div> -->

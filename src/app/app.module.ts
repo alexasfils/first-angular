@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ProvaComponent } from './prova/prova.component';
 import { ProvaServiceComponent } from './prova-service/prova-service.component';
 import { AboutComponent } from './componenti/about/about.component';
-import { ContactComponent } from './componenti/contact/contact.component';
+import { ContactComponent } from './componenti/contatti/contact.component';
+import { HomeComponent } from './componenti/home/home.component';
 
 import { AppRoutingModule } from './app.routes';
 import { MatSliderModule } from '@angular/material/slider';
@@ -17,7 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
 import { HighlightDirective } from './direttive/highlight.directive';
-import { HomeComponent } from './componenti/home/home.component';
+
 
 
 @NgModule({
