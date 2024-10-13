@@ -1,0 +1,50 @@
+<!-- <div class="contatto">
+    <ng-template *ngIf="personaContatto.isOnline; then bloccoIf else bloccoElse"></ng-template>
+    <ng-template #bloccoIf>
+        <div ngClass="desplayRow">
+            <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
+            <p>Online</p>
+        </div>
+    </ng-template>
+    <ng-template #bloccoElse>
+        <div ngClass="desplayRow">
+            <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
+            <p>Offline</p>
+        </div>
+    </ng-template>
+    <p>Profilo di {{personaContatto.nome}} {{personaContatto.cognome}}</p>
+    <p>Colore preferito: {{personaContatto.color}}</p>
+
+
+    <p>Eta: {{personaContatto.eta}}</p>
+</div> -->
+
+
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <ng-template *ngIf="personaContatto.isOnline; then bloccoIf else bloccoElse"></ng-template>
+        <ng-template #bloccoIf>
+            <div ngClass="desplayRow">
+                <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
+                <p>Online</p>
+            </div>
+        </ng-template>
+        <ng-template #bloccoElse>
+            <div ngClass="desplayRow">
+                <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
+                <p>Offline</p>
+            </div>
+        </ng-template>
+        <mat-card-title>{{personaContatto.nome}} {{personaContatto.cognome}}</mat-card-title>
+        <mat-card-subtitle>Eta: {{personaContatto.eta}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="mat-immagine" mat-card-image src={{personaContatto.imgUrl}} alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>Colore preferito: {{personaContatto.color}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>

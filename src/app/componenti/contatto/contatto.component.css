@@ -1,0 +1,46 @@
+.marginLeft{
+    margin-left: 10px;
+}
+.cerchioOnline,
+.cerchioOffline {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.cerchioOnline {
+    background-color: green;
+    color: white;
+}
+
+.cerchioOffline {
+    background-color: red;
+    color: yellow;
+}
+
+.desplayRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.contatto{
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+.mat-immagine{
+    max-width: 100% !important;
+    max-height: 350px !important;
+    min-height: 350px !important;
+    min-width: 380px !important;
+}

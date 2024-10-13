@@ -1,0 +1,15 @@
+<div class="container">
+    <div style="display: flex; flex-direction: column; ">
+        <p style="text-transform: uppercase; margin-top: 25px; color: red">Lista contatti</p>
+
+        <!--Ciclo l'arrey di persone e gli asegnio un id ciascuno per poter accedere al singolo contatto-->
+        <div *ngFor="let persona of persone; index as i">
+            <a routerLink="/contatti/{{i}}">
+                <p>{{i+1}} {{persona.nome}} {{persona.cognome}}</p>
+            </a>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+</div>

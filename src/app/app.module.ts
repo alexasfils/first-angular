@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ProvaComponent } from './prova/prova.component';
 import { ProvaServiceComponent } from './prova-service/prova-service.component';
 import { AboutComponent } from './componenti/about/about.component';
-import { ContactComponent } from './componenti/contatti/contact.component';
+import { ContactComponent } from './componenti/contatti/contatti.component';
 import { HomeComponent } from './componenti/home/home.component';
 
 import { AppRoutingModule } from './app.routes';
@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
 import { HighlightDirective } from './direttive/highlight.directive';
+import { ContattoComponent } from './componenti/contatto/contatto.component';
 
 
 
@@ -30,7 +31,8 @@ import { HighlightDirective } from './direttive/highlight.directive';
     ProvaServiceComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ContattoComponent
   ],
   imports: [
       BrowserModule,
