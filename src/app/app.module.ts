@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NewProvaComponent } from './new-prova/new-prova.component';
 import { HighlightDirective } from './direttive/highlight.directive';
 import { ContattoComponent } from './componenti/contatto/contatto.component';
+import { NotfoundComponent } from './componenti/notfound/notfound.component';
 
 
 
@@ -32,7 +33,8 @@ import { ContattoComponent } from './componenti/contatto/contatto.component';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ContattoComponent
+    ContattoComponent,
+    NotfoundComponent
   ],
   imports: [
       BrowserModule,

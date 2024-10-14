@@ -6,15 +6,21 @@ import { HomeComponent } from './componenti/home/home.component';
 import { AboutComponent } from './componenti/about/about.component';
 import { ContactComponent } from './componenti/contatti/contatti.component';
 import { ContattoComponent } from './componenti/contatto/contatto.component';
+import { NotfoundComponent } from './componenti/notfound/notfound.component';
 
 export const routes: Routes = [
   //metto i phath per spostarmi da una pagina all'altra
-  { path: '', component: HomeComponent },
+  //sull se non metto niente nell path allora mi sposto su homepage
+  { path: '', pathMatch:'full', redirectTo: 'homepage' },
+  { path: 'homepage', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
     path: 'contatti', component: ContactComponent,
     children: [{path: ':id', component: ContattoComponent}]
   },
+  { path: '404', component: NotfoundComponent },
+  // metto ** per dire che la qualsiasi cosa che non ho qui nei path mo lo reinderizzi alla pagina 404
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
