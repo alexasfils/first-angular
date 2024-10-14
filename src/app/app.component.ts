@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioProvaService } from './servizi/servizio-prova.service';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,21 +11,21 @@ export class AppComponent implements OnInit{
   
   title = 'corso-angilar2';
 
-  isVisible = true;
+  // isVisible = true;
   
-  numero = 3;
-  oggi = Date.now();
-  stringa = 'paperino';
+  // numero = 3;
+  // oggi = Date.now();
+  // stringa = 'paperino';
 
   
-  color = "green";
-  color2 = "red";
+  // color = "green";
+  // color2 = "red";
 //innietto il servizio nell costruttore e stampo a video il valore della stringa che e dentro il service
   constructor(private servizioProva: ServizioProvaService) {
     
   }
   ngOnInit(): void {
-    console.log("sono dentro app component:", this.servizioProva.getStringa());
+    
   }
 
   
@@ -38,7 +39,6 @@ export class AppComponent implements OnInit{
   //   ]
   // } 
   
-
 //   onRiceviDati(value: string){
 //     console.log(value);
 // }
