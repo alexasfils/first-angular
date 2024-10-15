@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { interval, Observable } from 'rxjs';
 
 @Component({
@@ -8,7 +8,9 @@ import { interval, Observable } from 'rxjs';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
-  sottoscrizzione: any;
+
+  /////////////////OBSERVABLE////////////////////////
+  // sottoscrizzione: any;
 
   /*Posso prendere il child dell componentec cioe' il form e passarlo lato angular
   chiamandolo con @ViewChild('homeform') homeform: NgForm; cosi prendo i dati dell form con angular*/ 
@@ -17,7 +19,7 @@ export class HomeComponent implements OnInit{
 constructor(){}
   
 //Uso l'observavle usando l'interval e sottoscrivendolo al numero e stampo il numero ogni volta indicato sul interval ad esempio ogni 1000 milesecondi
-  ngOnInit(): void {
+  // ngOnInit(): void {
   //  this.sottoscrizzione = interval(1000).subscribe(numero => {
   //     console.log(numero);
   //   })
@@ -34,16 +36,30 @@ constructor(){}
     // }).subscribe((numero) => {
     //   console.log(numero)
     // })
-  }
+  // }
 
   //Distruggo il observable quando il componente non e' piu in uso
 // ngOnDestroy(): void {
 //   this.sottoscrizzione.unsubscribe();
   //   }
-  
-  
 
-  onSubmit(form: NgForm) {
-    console.log(form);
+  // onSubmit(form: NgForm) {
+  //   console.log(form);
+  // }
+
+  ////////////////////////////////////////REACTIVE FORM////////////////////////////////////////////
+
+homeform: FormGroup
+
+  ngOnInit(): void { 
+    this.homeform = new FormGroup({
+      nome: new FormControl(null, [Validators.required, Validators.minLength(2)]),
+      email: new FormControl(null, [Validators.required, Validators.email] ),
+      colore: new FormControl()
+    })
+  }
+  
+  onSubmit() {
+    console.log(this.homeform);
   }
 }
