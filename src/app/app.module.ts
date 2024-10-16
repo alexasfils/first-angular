@@ -16,6 +16,7 @@ import { HighlightDirective } from './direttive/highlight.directive';
 import { AppRoutingModule } from './app.routes';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,7 +36,7 @@ import { MatSelectModule } from '@angular/material/select';
     ContactComponent,
     HomeComponent,
     ContattoComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
       BrowserModule,
@@ -48,7 +49,8 @@ import { MatSelectModule } from '@angular/material/select';
       MatButtonModule,
       MatInputModule,
       MatFormFieldModule,
-      MatSelectModule
+    MatSelectModule,
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
