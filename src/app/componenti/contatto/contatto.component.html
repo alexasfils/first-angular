@@ -23,7 +23,7 @@
 <mat-card class="example-card" appearance="outlined">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <ng-template *ngIf="personaContatto.isOnline; then bloccoIf else bloccoElse"></ng-template>
+        <!-- <ng-template *ngIf="personaContatto.isOnline; then bloccoIf else bloccoElse"></ng-template>
         <ng-template #bloccoIf>
             <div ngClass="desplayRow">
                 <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
@@ -35,13 +35,13 @@
                 <div [ngClass]="personaContatto.isOnline ? 'cerchioOnline':'cerchioOffline'"></div>
                 <p>Offline</p>
             </div>
-        </ng-template>
-        <mat-card-title>{{personaContatto.nome}} {{personaContatto.cognome}}</mat-card-title>
-        <mat-card-subtitle>Eta: {{personaContatto.eta}}</mat-card-subtitle>
+        </ng-template> -->
+        <mat-card-title>{{personaContatto?.nome}}</mat-card-title>
+        <mat-card-subtitle>Email: {{personaContatto?.email}}</mat-card-subtitle>
     </mat-card-header>
-    <img class="mat-immagine" mat-card-image src={{personaContatto.imgUrl}} alt="Photo of a Shiba Inu">
+    <!-- <img class="mat-immagine" mat-card-image src={{personaContatto.imgUrl}} alt="Photo of a Shiba Inu"> -->
     <mat-card-content>
-        <p>Colore preferito: {{personaContatto.color}}</p>
+        <p>Colore preferito: </p>
     </mat-card-content>
     <mat-card-actions>
         <button mat-button>LIKE</button>

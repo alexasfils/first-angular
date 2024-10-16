@@ -6,16 +6,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FirebaseService {
+  percorso = 'https://corso-angular-3715a-default-rtdb.europe-west1.firebasedatabase.app/persone'
 
   constructor(private httpClient: HttpClient) { }
 
 
-  inserPersona(url: string, body:{}): Observable<any> {
-    return this.httpClient.post(url, body);
+  inserPersona(body:{}): Observable<any> {
+    return this.httpClient.post(`${this.percorso}.json`, body);
   }
 
-  getPersone(url: string) {
-    return this.httpClient.get(url)
+  getPersone() {
+    return this.httpClient.get(`${this.percorso}.json`)
+  }
+
+  getPersona(id: string): Observable<any> {
+    return this.httpClient.get(`${this.percorso}/${id}.json`)
+  }
+
+  deletePersona(id: string) {
+    return this.httpClient.delete(`${this.percorso}/${id}.json`)
   }
   
 }

@@ -69,10 +69,17 @@ homeform: FormGroup
 /*Mi connetto all database di fireBase chiamando il metodo dell servizio
 Gli passo l'urd dell db aggiungende per esenpio perso.json ed il corpo del ogetto che voglio creare(nome, cognome, email)
 e gli passo (homeform.value.nome , oppure homeform.value.email) losottoscrivo con subscribe(data => {console.log)}) */
-    this.firebaseService.inserPersona('https://corso-angular-3715a-default-rtdb.europe-west1.firebasedatabase.app/persone.json',
+    this.firebaseService.inserPersona(
       {nome: this.homeform.value.nome, email: this.homeform.value.email}
     ).subscribe(data => {
        console.log(data)
      })
+  }
+
+  onDeletePersona() {
+    this.firebaseService.deletePersona('-O9LCHK4LAEgXlESb21q')
+      .subscribe(data => {
+      console.log(data)
+    })
   }
 }

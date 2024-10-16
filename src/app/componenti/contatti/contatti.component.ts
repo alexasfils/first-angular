@@ -16,10 +16,13 @@ export class ContactComponent implements OnInit{
   ngOnInit(): void {
     // this.persone = this.serviceProava.getPersone();
 
-   this.firebaseSrrvice.getPersone('https://corso-angular-3715a-default-rtdb.europe-west1.firebasedatabase.app/persone.json')
+   this.firebaseSrrvice.getPersone()
      .subscribe((data: any) => {
         console.log(data)
-        this.persone = Object.keys(data).map((key) => data[key]);
+       this.persone = Object.keys(data).map((key) => {
+         data[key]['id'] = key
+         return data[key]
+       });
         console.log(this.persone)
     })
   }
