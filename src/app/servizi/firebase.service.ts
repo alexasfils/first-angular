@@ -13,4 +13,9 @@ export class FirebaseService {
   inserPersona(url: string, body:{}): Observable<any> {
     return this.httpClient.post(url, body);
   }
+
+  getPersone(url: string) {
+    return this.httpClient.get(url)
+  }
+  
 }
