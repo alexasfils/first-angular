@@ -82,4 +82,12 @@ e gli passo (homeform.value.nome , oppure homeform.value.email) losottoscrivo co
       console.log(data)
     })
   }
+
+  onChangePersona() {
+    this.firebaseService.patchPersona('-O9JgT945Dk7HwJLTjg5',
+      { nome: 'Anna', email: 'annaneri@gmail.com' }
+    ).subscribe(data =>
+      console.log(data)
+    )
+  }
 }

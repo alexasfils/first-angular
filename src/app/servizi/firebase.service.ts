@@ -20,11 +20,15 @@ export class FirebaseService {
   }
 
   getPersona(id: string): Observable<any> {
-    return this.httpClient.get(`${this.percorso}/${id}.json`)
+    return this.httpClient.get(`${this.percorso}/${id}.json`);
   }
 
   deletePersona(id: string) {
-    return this.httpClient.delete(`${this.percorso}/${id}.json`)
+    return this.httpClient.delete(`${this.percorso}/${id}.json`);
+  }
+
+  patchPersona(id:string, body: {}) {
+    return this.httpClient.patch(`${this.percorso}/${id}.json`, body);
   }
   
 }
