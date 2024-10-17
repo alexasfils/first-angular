@@ -4,7 +4,7 @@
 
         <!--Ciclo l'arrey di persone e gli asegnio un id ciascuno per poter accedere al singolo contatto-->
         <div *ngFor="let persona of persone; index as i">
-            <a routerLink="/contatti/{{i}}">
+            <a routerLink="/contatti/{{persona.id}}">
                 <p>{{i+1}} {{persona?.nome}} {{persona?.email}}</p>
             </a>
             <button [routerLink]="[persona.id]">Dettagli</button>

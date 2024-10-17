@@ -1,0 +1,14 @@
+<p class="reg-section-title">Registrazione</p>
+
+<form id="signupform" #signupform="ngForm" (ngSubmit)="onSubmit(signupform)">
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" ngModel required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!signupform.valid">Invia</button>
+</form>

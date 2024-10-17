@@ -70,7 +70,11 @@ homeform: FormGroup
 Gli passo l'urd dell db aggiungende per esenpio perso.json ed il corpo del ogetto che voglio creare(nome, cognome, email)
 e gli passo (homeform.value.nome , oppure homeform.value.email) losottoscrivo con subscribe(data => {console.log)}) */
     this.firebaseService.inserPersona(
-      {nome: this.homeform.value.nome, email: this.homeform.value.email}
+      {
+        nome: this.homeform.value.nome,
+        email: this.homeform.value.email,
+        colore: this.homeform.value.colore
+      }
     ).subscribe(data => {
        console.log(data)
      })
