@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioProvaService } from './servizi/servizio-prova.service';
 import { interval, Observable } from 'rxjs';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +22,18 @@ export class AppComponent implements OnInit{
   // color = "green";
   // color2 = "red";
 //innietto il servizio nell costruttore e stampo a video il valore della stringa che e dentro il service
-  constructor(private servizioProva: ServizioProvaService) {
+  constructor(private autService: AuthService) {
     
   }
   ngOnInit(): void {
-    
+    if (localStorage.getItem('user')) {
+      const user = JSON.parse(localStorage.getItem('user')!);
+      this.autService.createUser(user.emai, user.id, user._token, user._expirationDate)
+    }
+  }
+
+  onLogout() {
+    this.autService.logout();
   }
 
   

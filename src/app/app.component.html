@@ -119,10 +119,21 @@
 <p>{{numero | number: '2.1-4'}}</p> -->
 
 <!-- <app-prova-service></app-prova-service> -->
+<div class="appcomponent_container">
+    <div>
+        <a routerLink="/" style="margin-right:10px;">Home</a>
+        <a routerLink="about" style="margin-right:10px;">About</a>
+        <a routerLink="contatti" style="margin-right:10px;">Contact</a>
+    </div>
 
-<a routerLink="/" style="margin-right:10px;">Home</a>
-<a routerLink="about" style="margin-right:10px;">About</a>
-<a routerLink="contatti" style="margin-right:10px;">Contact</a>
+
+    <div class="app-component_buttons">
+        <button mat-raised-button color="primary" routerLink="/signup">SignUp</button>
+        <button mat-raised-button color="primary" routerLink="/signin">SignIn</button>
+    </div>
+</div>
+
+<button mat-raised-button color="dangerous" (click)="onLogout()">Logout</button>
 
 <!--Restituisco la pagina efettica che parte da home 
 poi con le rotte(routerLink) dico quale il phath(percorso)-->

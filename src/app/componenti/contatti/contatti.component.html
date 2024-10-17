@@ -6,12 +6,14 @@
         <div *ngFor="let persona of persone; index as i">
             <a routerLink="/contatti/{{persona.id}}">
                 <p>{{i+1}} {{persona?.nome}} {{persona?.email}}</p>
+
             </a>
+            <button mat-raised-button color="primary" (click)="onDeletePersona()">Elimina utente</button>
+            <button mat-raised-button color="primary" (click)="onChangePersona()">Modifica utente</button>
+            <br>
             <button [routerLink]="[persona.id]">Dettagli</button>
         </div>
     </div>
-
-
 
     <router-outlet></router-outlet>
 

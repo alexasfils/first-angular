@@ -9,6 +9,7 @@ import { ContattoComponent } from './componenti/contatto/contatto.component';
 import { NotfoundComponent } from './componenti/notfound/notfound.component';
 import { AuthGuard } from './auth/auth.guard';
 import { SignupComponent } from './componenti/signup/signup.component';
+import { SigninComponent } from './componenti/signin/signin.component';
 
 export const routes: Routes = [
   //metto i phath per spostarmi da una pagina all'altra
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: 'homepage' },
   { path: 'homepage', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'signin', component: SigninComponent },
   { path: 'about', component: AboutComponent},
   {//dico che posso accedere ai contatti solo se AuthGuard = true;
     path: 'contatti', component: ContactComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard], children: [

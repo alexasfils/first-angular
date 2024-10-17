@@ -24,6 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { SignupComponent } from './componenti/signup/signup.component';
+import { SigninComponent } from './componenti/signin/signin.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { SignupComponent } from './componenti/signup/signup.component';
     ContattoComponent,
     NotfoundComponent,
     SignupComponent,
+    SigninComponent,
   ],
   imports: [
       BrowserModule,
